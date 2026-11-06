@@ -12,35 +12,41 @@
     <header>
       <p class="eyebrow">CTRL + PLAY <span> / </span> NIT CALICUT</p>
       <h1>Pixel <em>Playground</em></h1>
-      <p id="mission">Collect sparks. Dodge drones. See how long you last.</p>
+      <p id="mission">Collect sparks, dodge armed drones, and watch for traps as the maze changes every 10 seconds.</p>
     </header>
     <section class="cabinet" aria-label="Arcade game">
       <div class="hud">
         <div>Score <strong id="score">0</strong></div>
         <div>Level <strong id="level">1</strong></div>
         <div>Best <strong id="best">0</strong></div>
+        <div>Maze <strong><span id="maze-time">10</span>s</strong></div>
+        <div>Power <strong id="power-status">—</strong></div>
       </div>
       <div class="stage">
-        <canvas id="arena" width="720" height="432" tabindex="0" aria-label="Game arena" aria-describedby="mission controls">This game requires Canvas support.</canvas>
+        <canvas id="arena" width="1008" height="576" tabindex="0" aria-label="Game arena" aria-describedby="mission controls">This game requires Canvas support.</canvas>
         <div class="overlay" id="overlay">
           <div>
             <p class="eyebrow" id="status" role="status">READY TO PLAY</p>
             <h2 id="panel-title">Enter the arena</h2>
-            <p id="panel-detail">Grab five sparks to reach the next level.</p>
+            <p id="panel-detail">Hold Space or Fire to shoot in your last movement direction. Blue rings teleport you across the maze. Every five sparks adds a level and more traps.</p>
             <button id="action" type="button">Start game</button>
           </div>
         </div>
       </div>
       <div class="legend" id="controls">
         <span><kbd>WASD</kbd> or <kbd>↑ ← ↓ →</kbd> to move</span>
+        <span>Hold <kbd>Space</kbd> to fire</span>
         <span><b class="spark">◆</b> Spark &nbsp; <b class="drone">✕</b> Drone</span>
+        <span><b>A</b> Armor pickup &nbsp; <b>B</b> Blast pickup</span>
+        <span>Traps: spikes, boulders, arrows, dragon fire</span>
       </div>
     </section>
-    <div class="touch" aria-label="Direction controls">
+    <div class="touch" aria-label="Touch controls">
       <button data-key="arrowup" aria-label="Move up">↑</button>
       <button data-key="arrowleft" aria-label="Move left">←</button>
       <button data-key="arrowdown" aria-label="Move down">↓</button>
       <button data-key="arrowright" aria-label="Move right">→</button>
+      <button data-key="fire" aria-label="Fire machine gun">Fire</button>
     </div>
     <footer>WORKSHOP BUILD <span> / </span> BUILT FOR REMIXING</footer>
   </main>
